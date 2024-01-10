@@ -3,8 +3,7 @@
 
 Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo.
 
-![Alt text](img/imagen1.png)
-
+![Alt text](C:\Users\eloyc\DesafioTripulaciones_Sept23_Grupo2_Cloud-1\img\imagen1.png>)
 
 # Pipeline de despliegue en GCP
 
@@ -25,9 +24,9 @@ Los principales eventos a tener en cuenta en el desarrollo de una pipeline son:
 
 
 
-![Alt text](img/imagen2.png)
+![Alt text](<Captura de pantalla 2024-01-10 122053.png>)
 
 Cuando fullstack realiza un commit a la rama de dessarrollo, el activador se pone en marcha, ejecutando la cloudbuild, tal y como se muestra en la imagen inferior.
 
-![Alt text](img/imagen3.png)
+![Alt text](<Captura de pantalla 2024-01-10 122159.png>)
 
