@@ -3,7 +3,7 @@
 
 Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo.
 
-![Alt text](C:\Users\eloyc\DesafioTripulaciones_Sept23_Grupo2_Cloud-1\img\imagen1.png>)
+![Alt text](img\imagen1.png>)
 
 # Pipeline de despliegue en GCP
 

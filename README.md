@@ -31,3 +31,13 @@ Cuando fullstack realiza un commit a la rama de dessarrollo, el activador se pon
 
 ![Alt text](img/imagen3.png)
 
+# Infraestructura como código con TERRAFORM
+
+Terraform es una herramienta de código abierto desarrollada por HashiCorp que se utiliza para automatizar la infraestructura y la gestión de la configuración. Permite a los usuarios definir y provisionar de manera declarativa la infraestructura y los recursos en la nube mediante la creación de archivos de configuración llamados "archivos de configuración de Terraform". Estos archivos describen los recursos deseados y sus relaciones, y Terraform se encarga de crear, modificar o destruir esos recursos de manera eficiente y coherente. La herramienta es compatible con varios proveedores de servicios en la nube, como AWS, Azure, Google Cloud, entre otros, lo que facilita la gestión de la infraestructura en entornos multicloud.
+
+En el equipo de Cloud, hemos decidido utilizar Google Cloud Platform (GCP) como proveedor de nube para levantar nuestra aplicación, y como consecuencia Terraform es la herramienta que mejor se adapta a las necesidades de automatización en GCP.
+
+
+
+
+
