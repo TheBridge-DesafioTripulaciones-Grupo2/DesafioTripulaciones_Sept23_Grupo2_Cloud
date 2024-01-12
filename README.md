@@ -37,6 +37,10 @@ Terraform es una herramienta de código abierto desarrollada por HashiCorp que s
 
 En el equipo de Cloud, hemos decidido utilizar Google Cloud Platform (GCP) como proveedor de nube para levantar nuestra aplicación, y como consecuencia Terraform es la herramienta que mejor se adapta a las necesidades de automatización en GCP.
 
+El primer paso que dimos desde Cloud en Terraform fue crear la infraestructura como código para automatizar la base de datos, lo cual fue existosa.
+
+![Alt text](img/imagen4.png)
+
 
 
 
