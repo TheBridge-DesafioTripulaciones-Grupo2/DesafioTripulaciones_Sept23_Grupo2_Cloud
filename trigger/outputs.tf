@@ -1,4 +1,4 @@
+output "cloudbuild_trigger_id" {
+  value = module.cloudbuild_trigger.trigger_id
+}
 
-#output "trigger_id" {
- # value = google_build_trigger.example.id
-#}
