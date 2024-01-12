@@ -2,7 +2,7 @@
 provider "google" {
   credentials = file("./credentials.json")
   project     = var.project_id
-  region      = "eu-west1"
+  region      = "europe-west1"
 }
 
 module "cloudbuild_trigger" {
