@@ -15,7 +15,7 @@
 
 # Objetivos
 
- Seleccionar la cuenta de Cloud asociada al grupo del proyecto. Buscar la forma de conseguir gratuidad para el tiempo que 
+● Seleccionar la cuenta de Cloud asociada al grupo del proyecto. Buscar la forma de conseguir gratuidad para el tiempo que 
 dure el desafío de tripulaciones.
 
 ● Establecer los miembros del equipo que tendrán acceso al proyecto. Crear niveles de acceso y edición de recursos. 
@@ -30,7 +30,9 @@ automatización para su configuración y actualización.
 ● Implementación de pipelines de CI/CD: Los alumnos deben establecer un flujo de integración continua y entrega continua 
 (CI/CD). Deben construir una aplicación que permita la construcción y despliegue automatizado de la aplicación o servicios 
 desarrollados. 
+
 ○ Definir la arquitectura de CI en función del tipo y lenguaje de la aplicación a desarrollar
+
 ○ Definir la arquitectura de CD en función del objetivo (Solo Dev, Dev y Prod)
 
 ● Monitorización y gestión de logs: Implementar una solución de monitorización, donde los desarrolladores puedan comprobar 
@@ -40,9 +42,15 @@ en todo momento el estado de su solución desplegada.
 seguridad para que no se pueda utilizar de forma inadecuada por elementos ajenos a la organización ni de forma indebida por 
 elementos de la organización. 
 
-Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo.
+## Elección de la nube
 
-![Alt text](img/imagen1.png)
+Para este proyecto nos hemos decantado por la nube de Google (GCP) por dos motivos:
+
+● Documentación precisa y completa.
+
+● Facilidad para configurar permisos en cuentas y servicios.
+
+Debido a estos dos puntos se obtiene una eficiencia y una eficacia optimas para el uso de los servicios de la nube y obtener los objetivos planteados
 
 <a id="permisos"></a>
 
@@ -65,6 +73,10 @@ El primer paso que dimos desde Cloud en Terraform fue crear la infraestructura c
 <a id="cicd"></a>
 
 # Pipeline de despliegue en GCP
+
+Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo.
+
+![Alt text](img/imagen1.png)
 
 Los activadores en el contexto de una pipeline de despliegue son eventos o condiciones que inician automáticamente el proceso de despliegue. En este caso, lo hemos dividido en dos pipelines, una para  desarrollo y otra para producción. Estos activadores aseguran que el despliegue se realice en respuesta a cambios.
 
