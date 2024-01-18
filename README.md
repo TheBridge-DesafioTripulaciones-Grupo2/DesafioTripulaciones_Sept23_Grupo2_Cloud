@@ -56,7 +56,15 @@ Debido a estos dos puntos se obtiene una eficiencia y una eficacia optimas para 
 
 # Niveles de acceso (gestión de permisos)
 
-Permisos
+Para este proyecto hemos creado 2 roles asignados a los usuarios de las vericales que se mencionarán a continuación
+
+- FullStack: lectura sobre los servicios Cloud Build y Cloud Run, así como sobre sus logs para comprobar errores en las pipelines
+
+- Data: lectura sobre el servicio de Cloud Run, para la comprobación de logs sobre la API
+
+- Ciberseguridad: lectura sobre todos los servicios de Google Cloud
+
+En el caso de la base de datos PostgreSQL, las verticales que necesiten acceder a ella lo harán de manera externa con un programa, el acceso se hará con un usuario autorizado previamente en la nube
 
 <a id="iac"></a>
 
@@ -64,7 +72,11 @@ Permisos
 
 Terraform es una herramienta de código abierto desarrollada por HashiCorp que se utiliza para automatizar la infraestructura y la gestión de la configuración. Permite a los usuarios definir y provisionar de manera declarativa la infraestructura y los recursos en la nube mediante la creación de archivos de configuración llamados "archivos de configuración de Terraform". Estos archivos describen los recursos deseados y sus relaciones, y Terraform se encarga de crear, modificar o destruir esos recursos de manera eficiente y coherente. La herramienta es compatible con varios proveedores de servicios en la nube, como AWS, Azure, Google Cloud, entre otros, lo que facilita la gestión de la infraestructura en entornos multicloud.
 
-En el equipo de Cloud, hemos decidido utilizar Google Cloud Platform (GCP) como proveedor de nube para levantar nuestra aplicación, y como consecuencia Terraform es la herramienta que mejor se adapta a las necesidades de automatización en GCP.
+En el equipo de Cloud, hemos decidido utilizar Terraform como IaC, debido a que es la herramienta que mejor se adapta a las necesidades de automatización en GCP.
+
+
+
+
 
 El primer paso que dimos desde Cloud en Terraform fue crear la infraestructura como código para automatizar la base de datos, lo cual fue existosa.
 
@@ -74,11 +86,11 @@ El primer paso que dimos desde Cloud en Terraform fue crear la infraestructura c
 
 # Pipeline de despliegue en GCP
 
-Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo.
+Desde Cloud hemos creado una organización en GitHub con diferentes repositorios para cada vertical con el fin de ir canalizando y automatizando el trabajo de cada grupo, sobretodo enfocado hacia FullStack y Data que son los compañeros que añadirán codigo al repositorio.
 
 ![Alt text](img/imagen1.png)
 
-Los activadores en el contexto de una pipeline de despliegue son eventos o condiciones que inician automáticamente el proceso de despliegue. En este caso, lo hemos dividido en dos pipelines, una para  desarrollo y otra para producción. Estos activadores aseguran que el despliegue se realice en respuesta a cambios.
+Los activadores en el contexto de una pipeline de despliegue son eventos o condiciones que inician automáticamente el proceso de despliegue. Para este proyecto definiremos dos pipelines, una para  desarrollo y otra para producción. Estos activadores aseguran que el despliegue se realice en respuesta a cambios en los repositorios que nos interesan, en este caso para el repositorio de FullStack.
 
 El activador esta asociado a un repositorio como GitHub, cuando se produce un cambio, el activador se pone en marcha, iniciando el proceso de construcción a través de Cloud Build.
 
