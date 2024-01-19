@@ -8,7 +8,6 @@
   <li><a href="#permisos"> Niveles de acceso (permisos) </a></li>
   <li><a href="#iac">Infraestructura como codigo (IaC) </a></li>
   <li><a href="#cicd"> CI/CD </a></li>
-  <li><a href="#monitorizacion"> Monitorización y gestion de logs </a></li>
 </ol>
 
 <a id="objetivos"></a>
@@ -74,13 +73,7 @@ Terraform es una herramienta de código abierto desarrollada por HashiCorp que s
 
 En el equipo de Cloud, hemos decidido utilizar Terraform como IaC, debido a que es la herramienta que mejor se adapta a las necesidades de automatización en GCP.
 
-
-
-
-
-El primer paso que dimos desde Cloud en Terraform fue crear la infraestructura como código para automatizar la base de datos, lo cual fue existosa.
-
-![Alt text](img/imagen4.png)
+Al inicio del repositorio adjuntamos los archivos de Terraform
 
 <a id="cicd"></a>
 
@@ -105,17 +98,16 @@ Los principales eventos a tener en cuenta en el desarrollo de una pipeline son:
 - Seguridad
 - Pruebas en Producción
 
+Se crean dos activadores por cada pipeline, cliente y servidor para la pipeline de Dev y dos de cliente y servidor para la pipeline de Prod, los activadores de la pipeline de Dev se configuran en la rama de "dev" en el repositorio de FullStack y los activadores de la pipeline de Prod se configuran en la rama de "main" en el mismo repositorio
 
+De esta manera conseguimos que cada vez que se haga una modificación en sus correspondientes ramas se inicien los activadores, inicie el servicio Cloud Build y que este a su vez inicie el servicio Cloud Run para levantar las partes de la aplicación web
 
 ![Alt text](img/imagen2.png)
 
-Cuando fullstack realiza un commit a la rama de dessarrollo, el activador se pone en marcha, ejecutando la cloudbuild, tal y como se muestra en la imagen inferior.
+![Alt text](image.png)
+
+![Alt text](image-1.png)
+
+Por ejemplo, cuando fullstack realiza un commit a la rama de dessarrollo, el activador correspondiente se pone en marcha, ejecutando la cloudbuild, tal y como se muestra en la imagen inferior.
 
 ![Alt text](img/imagen3.png)
-
-
-
-
-
-
-
