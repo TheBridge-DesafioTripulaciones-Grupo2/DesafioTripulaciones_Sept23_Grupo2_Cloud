@@ -104,9 +104,9 @@ De esta manera conseguimos que cada vez que se haga una modificación en sus cor
 
 ![Alt text](img/imagen2.png)
 
-![Alt text](image.png)
+![Alt text](img/image.png)
 
-![Alt text](image-1.png)
+![Alt text](img/image-1.png)
 
 Por ejemplo, cuando fullstack realiza un commit a la rama de dessarrollo, el activador correspondiente se pone en marcha, ejecutando la cloudbuild, tal y como se muestra en la imagen inferior.
 
